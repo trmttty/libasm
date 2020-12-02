@@ -3,7 +3,7 @@
 ft_strlen:
 	mov		rax, -1
 loop:
-	inc		rax
+	add		rax, 1
 	mov		dl, byte [rdi+rax]
 	cmp		dl, 0
    	jne		loop
