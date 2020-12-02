@@ -2,9 +2,9 @@
 	global	ft_strlen
 ft_strlen:
 	mov		rax, -1
-loop:
+.loop:
 	add		rax, 1
 	mov		dl, byte [rdi+rax]
 	cmp		dl, 0
-   	jne		loop
+   	jne		.loop
 	ret
