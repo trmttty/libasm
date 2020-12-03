@@ -6,7 +6,7 @@
 #    By: ttarumot <ttarumot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/28 09:50:40 by ttarumot          #+#    #+#              #
-#    Updated: 2020/12/02 14:21:41 by ttarumot         ###   ########.fr        #
+#    Updated: 2020/12/03 23:46:46 by ttarumot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS	= -Wall -Werror -Wextra
 NAME	= libasm.a
 
 %.o: %.s
-	nasm -felf64 $<
+	nasm -fmacho64 $<
 
 all: $(NAME)
 
@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS) *.o
+	rm -rf $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME) test
@@ -32,7 +32,7 @@ fclean: clean
 re: fclean $(NAME)
 
 test: $(NAME)
-	gcc $(FLAGS) -o test main.c -L. -lasm
+	gcc $(FLAGS) -g -o test main.c -L. -lasm
 	./test
 
 .PHONY: all clean fclean re test
