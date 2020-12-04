@@ -1,5 +1,4 @@
 *.o
-a.out
 *.a
-test
+test*
 libasm_test
