@@ -6,7 +6,7 @@
 #    By: ttarumot <ttarumot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/28 09:50:40 by ttarumot          #+#    #+#              #
-#    Updated: 2020/12/04 10:39:13 by ttarumot         ###   ########.fr        #
+#    Updated: 2020/12/04 04:20:46 by ttarumot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS	= -Wall -Werror -Wextra
 NAME	= libasm.a
 
 %.o: %.s
-	nasm -fmacho64 $<
+	nasm -felf64 $<
 
 all: $(NAME)
 
@@ -32,7 +32,7 @@ fclean: clean
 re: fclean $(NAME)
 
 test: $(NAME)
-	gcc -g -o test main.c -L. -lasm
+	gcc -no-pie main.c -o test -L. -lasm
 	./test
 
 .PHONY: all clean fclean re test

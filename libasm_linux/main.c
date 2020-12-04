@@ -6,11 +6,12 @@
 /*   By: ttarumot <ttarumot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 03:05:49 by ttarumot          #+#    #+#             */
-/*   Updated: 2020/12/04 10:46:21 by ttarumot         ###   ########.fr       */
+/*   Updated: 2020/12/04 04:19:01 by ttarumot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
@@ -200,27 +201,6 @@ int     main(void)
     test_write();
     test_read();
     test_strdup();
-    // int     len;
-
-    //len = ft_strlen("test");
-    // len = ft_strlen("test");
-    // printf("%d\n", len);
-
-    // {
-    //     char *ret;
-    //     char dist[10] = "abc";
-    //     char src[] = "efghijk";
-    //     ret = ft_strcpy(dist, src);
-    //     printf("%s\n", ret);
-    // }
-    // {
-    //     char *s1 = "\xff\xff";
-    //     char *s2 = "\xff";
-    //     int ret;
-    //     ret = ft_strcmp(s1, s2);
-    //     printf("%d\n", ret);
-    // }
-    // char s[] = "\xff";
-    // ft_write(1, NULL, ft_strlen(s));
-    // perror("err:");
+    
+    return (0);
 }
