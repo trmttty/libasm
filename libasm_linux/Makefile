@@ -6,7 +6,7 @@
 #    By: ttarumot <ttarumot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/28 09:50:40 by ttarumot          #+#    #+#              #
-#    Updated: 2020/12/04 04:20:46 by ttarumot         ###   ########.fr        #
+#    Updated: 2020/12/04 04:23:38 by ttarumot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) main.o
 
 fclean: clean
 	rm -rf $(NAME) test
