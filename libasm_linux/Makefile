@@ -6,7 +6,7 @@
 #    By: ttarumot <ttarumot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/28 09:50:40 by ttarumot          #+#    #+#              #
-#    Updated: 2020/12/03 23:46:46 by ttarumot         ###   ########.fr        #
+#    Updated: 2020/12/04 10:39:13 by ttarumot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ fclean: clean
 re: fclean $(NAME)
 
 test: $(NAME)
-	gcc $(FLAGS) -g -o test main.c -L. -lasm
+	gcc -g -o test main.c -L. -lasm
 	./test
 
 .PHONY: all clean fclean re test
